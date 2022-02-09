@@ -73,7 +73,10 @@ public class ConverterTest {
     @Test
     public void testConvertCSVtoJSON() {
         
-        assertEquals(jsonString, Converter.csvToJson(csvString));
+        JSONObject jsonExpectedObject = (JSONObject)JSONValue.parse(jsonString);
+        JSONObject jsonActualObject = (JSONObject)JSONValue.parse(Converter.csvToJson(csvString));
+        
+        assertEquals(jsonExpectedObject, jsonActualObject);
         
     }
 
