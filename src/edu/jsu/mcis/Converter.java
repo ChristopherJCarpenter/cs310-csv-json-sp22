@@ -84,7 +84,7 @@ public class Converter {
                 
                 String [] line = iterator.next();
                 String [] rows;
-              /// Add headings to array "headings
+              
                for (String field : line)
                 {
                     colheadings.add(field);
@@ -108,11 +108,6 @@ public class Converter {
                    
                }
                
-                //for (int i = 0; i < colheadings.size(); i++)
-                //{
-                ////   System.out.println(colheadings.get(i));                   
-                ///}
-                
                 
    
             json.put("colHeaders", colheadings);
