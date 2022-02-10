@@ -90,9 +90,9 @@ public class ConverterTest {
     @Test
     public void testConvertJSONtoCSVtoJSON(){
         
-        String csv = Converter.jsonToCsv(jsonString);
-        String json = Converter.csvToJson(csv);
-        assertEquals(jsonString, json);
+        JSONObject jsonExpectedObject = (JSONObject)JSONValue.parse(jsonString);
+        JSONObject jsonActualObject = (JSONObject)JSONValue.parse(Converter.csvToJson(csvString));
+        assertEquals(jsonExpectedObject, jsonActualObject);
 
     }
 	
